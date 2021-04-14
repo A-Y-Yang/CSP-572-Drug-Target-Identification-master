@@ -1,0 +1,37 @@
+multi-labeled
+{'bs_mod': 0.9353991698078712,
+ 'lstm_mod': 0.929043864576445,
+ 'mdt_classifier': 0.9212190152028727,
+ 'mrf_classifier': 0.9180319603252538}
+
+chembl1957
+{'dnn_mod': 0.9491366366366367,
+ 'dt_classifier': 0.9414414414414415,
+ 'gb_classifier': 0.9690315315315315,
+ 'lr_classifier': 0.9725037537537538,
+ 'rf_classifier': 0.9691253753753754,
+ 'svm_classifier': 0.9552364864864865}
+
+chembl203
+{'dnn_mod': 0.8835294117647059,
+ 'dt_classifier': 0.9176470588235294,
+ 'gb_classifier': 0.8952941176470588,
+ 'lr_classifier': 0.8941176470588235,
+ 'rf_classifier': 0.9388235294117647,
+ 'svm_classifier': 0.9176470588235294}
+
+chembl614725
+{'dnn_mod': 0.8967948717948717,
+ 'dt_classifier': 0.7743589743589744,
+ 'gb_classifier': 0.9038461538461537,
+ 'lr_classifier': 0.8653846153846153,
+ 'rf_classifier': 0.8378205128205127,
+ 'svm_classifier': 0.8884615384615384}
+
+chembl2842
+{'dnn_mod': 0.9109401709401709,
+ 'dt_classifier': 0.9442735042735043,
+ 'gb_classifier': 0.9369230769230771,
+ 'lr_classifier': 0.9273504273504273,
+ 'rf_classifier': 0.941025641025641,
+ 'svm_classifier': 0.9292307692307693}
