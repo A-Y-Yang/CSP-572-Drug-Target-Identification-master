@@ -1,0 +1,72 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+<div style="
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 0.3rem;
+" class="mt-5">
+
+    <div class="modal-header">
+    <h1 class="modal-title" id="exampleModalLongTitle">FAQ's</h1>
+</div>
+    <div class="modal-body">
+    <ol>
+        <li>
+            <strong>
+                What are the targets that are shown in the section?
+            </strong><br>
+                There are four targets EGFR, IGF1R, MIA-PaCa, mTOR which are used to
+                identify the probability for a compound’s active/inactive nature.
+        </li><br>
+        <li>
+            <strong>
+                Can multiple targets be selected at the same time?
+            </strong><br>
+                Yes, they can be selected.
+        </li><br>
+        <li>
+            <strong>
+                What is the reason for using two different types of classification for obtaining the results?
+            </strong><br>
+                To get accurate results and for comparison purposes, we have used two ways of classification.
+        </li><br>
+        <li>
+            <strong>
+                Why is it taking so long to get the results?
+            </strong><br>
+                Normally for a small list of compounds, it takes around 1 minute to generate results as
+                the model is running in the background. In case you have uploaded as input a file that has
+                 many compounds, it might be delayed to produce the results.
+        </li><br>
+        <li>
+            <strong>
+                Can the results be produced for large amounts of data?
+            </strong><br>
+            Yes, you can enter your email address where the results would be received after the model
+            is done running in the background.
+        </li><br>
+        <li>
+            <strong>
+                What is the correct format for uploading the input file?
+            </strong><br>
+            A list of only the compounds as a csv format. You can find an example input file next
+            to the choose file button.
+        </li><br>
+        <li>
+            <strong>
+                What if I do not want to enter my email address ?
+            </strong><br>
+            Entering an email address is optional. If you want to receive the results in your mail,
+            it should be entered otherwise you can view the results directly.
+        </li><br>
+    </ol>
+</div>
+
+</div>
+
+
+{% endblock content %}

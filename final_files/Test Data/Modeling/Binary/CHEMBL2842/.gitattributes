@@ -1,0 +1,8 @@
+# MANAGED BY DSW
+041321CHEMBL2842__B_rf_classifier.pkl filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+041321CHEMBL2842__B_svm_classifier.pkl filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+CHEMBL2842binary_X_train.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+CHEMBL2842binary_X_val_train.csv filter=lfs diff=lfs merge=lfs -text

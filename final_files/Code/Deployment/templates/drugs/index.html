@@ -1,0 +1,134 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="main">
+
+    <form method="post" class="fom mx-auto mt-5" enctype="multipart/form-data" id="c-form">
+        <h5 class="w-75 mx-auto white-color"> Predict active/inactive compounds</h5>
+        {% csrf_token %}
+        <div class="form-floating mb-4 mt-5">
+            <select class="form-select" id="ta" aria-label="Floating label select example" name="therapeutic">
+                <option value="">Select a Therapeutic Area</option>
+            </select>
+            <label for="ta">Therapeutic Area</label>
+        </div>
+
+        <div class="form-floating mt-4">
+            <select class="form-select" id="indication" name="indication"
+                aria-label="Floating label select example" name="indication">>
+                <option value="">Select Therapeutic area first to select an indication</option>
+             </select>
+            <label for="indication">Indication</label>
+        </div>
+        
+        <div class="row mt-4">
+            <label class="text-white">Select Targets</label>
+            <select class="selectpicker w-100" multiple data-live-search="true" name="checks">
+                <option>EGFR</option>
+                <option>IGF1R</option>
+                <option>MIA-PaCa-2</option>
+                <option>mTOR</option>
+            </select>
+        </div>
+
+        <div class="row mt-4">
+            <div class="form-group col-md-7 choose-file" for="inlineCheckbox2">
+                 <input type="file" name="uploadedFile" class="form-control-file" id="exampleFormControlFile1"
+                   required>
+            </div>
+            <a href="{% static '/data/example_input.csv' %}" download="example_input.csv" class="text-white col-md-5 download-example">
+                <u> Download Example </u>
+            </a>
+        </div>
+
+        <button type="button" class="btn w-color w-100 btn-predict"
+                data-toggle="modal" data-target="#confirm-submit"
+                style="background-color: #ff6103">
+            Predict
+        </button>
+
+    </form>
+
+    <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Predictions are in works
+                </div>
+                <div class="modal-body">
+                    We have it from here, our models are predicting the status for the compounds you selected.
+                    You will get an email once the predictions are done and you can comeback on the webapp to see
+                    the results and find out similar compounds.
+
+                </div>
+
+                <div class="modal-footer">
+                    <button id = "submit" type="button" class="btn btn-predict white-color"
+                            style="background-color: #ff6103" data-dismiss="modal">Sure.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var diseases = {
+      'Oncology' : {
+        name:"Oncology",
+        indications: [
+            {val:"Pancreatic Cancer", name:"Pancreatic Cancer"},
+            {val:"Lung Cancer", name:"Lung Cancer"},
+            {val:"Liver Cancer", name:"Liver Cancer"},
+            {val:"Breast Cancer", name:"Breast Cancer"},
+            {val: "Melanoma", name: "Melanoma"}
+          ]
+        },
+      'Cardiology': {
+        name:"Cardiology",
+        indications: [
+            {val:"Dermatophytosis",name:"Dermatophytosis"},
+            {val:"Arrhythmia",name:"Arrhythmia"}
+          ]
+        },
+      'Gastroenterology': {
+        name:"Gastroenterology",
+        indications: [
+            {val:"Enterovirus",name:"Enterovirus"},
+            {val:"Gastroparesis",name:"Gastroparesis"},
+            {val:"Peptic Ulcer Disease", name: "Peptic Ulcer Disease"}
+          ]
+        }
+    }
+    $(function() {
+  $.each(diseases,function(num,disease) {
+    $('#ta').append('<option value="'+num+'">'+disease.name+'</option>');
+  });
+  $('#ta').on("change",function() {
+    var br = this.value, $indicationDrop=$("#indication")
+    window.console && console.log(br);
+    $("option:gt(0)",$indicationDrop).remove();
+    if (br) {
+      $("option:eq(0)",$indicationDrop).text("Please select Indication for "+diseases[br].name);
+
+      var indications = diseases[br].indications;
+      $.each(indications,function(_,indication) {
+        $indicationDrop.append('<option value="'+indication.val+'">'+indication.name+'</option>');
+      });
+    }
+    else {
+      $("option:eq(0)",$indicationDrop).text("<-- Select borough first to narrow down");
+      }
+  });
+});
+
+
+    $('#submit').click(function(){
+        $('#c-form').submit();
+    });
+
+
+</script>
+{% endblock content %}
+<!--</body>-->
+<!--</html>-->

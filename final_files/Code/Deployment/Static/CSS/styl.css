@@ -1,0 +1,369 @@
+html, body{
+    height: 100%;
+    /*background: url('/drugs/Static/Pictures/dna.jpg') no-repeat center rgba(0, 0, 0, 0.25);*/
+    background-size: cover;
+    /*overflow: hidden;*/
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fom{
+    width: 40%;
+    height: inherit;
+    padding: 5%;
+    float: left;
+}
+.title_name{
+    color: #086c92;
+    font-family: 'Ranchers', cursive;
+    font-size: 75pt;
+    width: 100%;
+    text-align: right;
+    padding-right: 3%;
+}
+
+.result_main{
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 20%;
+    height: 300px;
+    background: white;
+    border-radius: 15px;
+    /*overflow: hidden;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+}
+
+.rm1{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.rm2{
+    width: 100%;
+    height: 20%;
+    background: whitesmoke;
+    position: relative;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.prob{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pclass{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-primary{
+    width:100%;
+}
+
+.head1{
+    width: 50%;
+    /*background-color: darkorange;*/
+    padding-top: 1%;
+    padding-left: 26%;
+}
+
+.head2{
+    float: left;
+    width: 50%;
+    /*background-color: darkseagreen;*/
+}
+
+
+.ayush{
+    height: 100px;
+}
+
+.main_dialog{
+    background: whitesmoke;
+    width: 200%;
+    height: 500px;
+    margin-left: -50%;
+}
+.myteam{
+    color:  #4285F4;
+    font-family: 'Alatsi', sans-serif;
+}
+
+.photos{
+    width: 90%;
+    height: 70%;
+    margin-left: 5%;
+    margin-top: 1%;
+    position: relative;
+}
+
+.photomain{
+    width: 100%;
+    height: 200px;
+    /*margin: 0;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 7%;
+}
+
+
+.photosec1{
+    height: 100%;
+    width:25%;
+    float: left;
+}
+
+
+.photosec2{
+    height: 100%;
+    width:25%;
+    float: left;
+}
+
+
+.photosec3{
+    height: 100%;
+    width:25%;
+    float: left;
+}
+
+
+.photosec4{
+    height: 100%;
+    width:25%;
+    float: left;
+}
+
+.picturesec{
+    width: 100%;
+    height: 80%;
+    padding-left: 6.5%;
+    /*background-color: darkgoldenrod;*/
+}
+
+
+.namesec{
+    width: 100%;
+    height: 20%;
+    /*background-color: lime;*/
+    text-align: center;
+    padding-top: 15%;
+}
+.photo1{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 12%;
+    background-size: 10px;
+    /*background: whitesmoke url('/drugs/Static/Pictures/ayush.jpg') no-repeat center;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+
+.photo1 img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.photo2 img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.photo3 img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+
+.photo2{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
+    overflow: hidden;
+}
+
+
+.photo3{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
+    overflow: hidden;
+}
+
+
+.photo4{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
+    overflow: hidden;
+}
+
+.teams{
+    /*background-color: forestgreen;*/
+    text-align: center;
+}
+
+.aboutus{
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    /*color: black;*/
+    background-image: linear-gradient(to right, red, orange 50%, brown);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.nam{
+    font-family: 'Nova Square', cursive;
+    padding-right: 5%;
+    padding-top: 1%;
+}
+
+#abyusbody{
+    height: 90%;
+}
+#abus{
+    width: 100%;
+    min-height: 90%;
+}
+.aboutsecc{
+    text-align: center;
+    font-family: 'Farsan', cursive;
+    font-size: 14pt;
+    color: darksalmon;
+    padding-top: 1%;
+}
+
+
+.namcode{
+    /*font-family: 'Libre Barcode 128', cursive;*/
+    font-family: 'Libre Barcode 39 Text', cursive;
+    color: #4285F4;
+    padding-right: 5%;
+}
+.form-check-label{
+    color: white;
+}
+
+/*.rsltmsg{*/
+/*    background-color: darksalmon;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*}*/
+.rssltmsg{
+    /*color: #086c92;*/
+    padding-top: 25%;
+    font-style: italic;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    color: whitesmoke;
+}
+
+.logt{
+    padding-top: 0.9%;
+}
+
+.faq{
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    /*color: black;*/
+    background: linear-gradient(to right, red, orange 50%, brown);
+    color: transparent;
+    -webkit-background-clip: text;
+    border: none;
+    float: right;
+}
+
+/*.first{*/
+/*    width: 75%;*/
+/*    background-color: white;*/
+/*    height: 50px;*/
+/*    margin-left: 12.5%;*/
+/*    padding-left: 2%;*/
+/*    padding-right: 2%;*/
+/*    display:flex;*/
+/*    align-items: center;*/
+/*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+/*}*/
+.namm{
+    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.lou{
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    background-image: linear-gradient(to right, red, orange 50%, brown);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-decoration: none;
+}
+.lot{
+    margin-top: 6%;
+    text-decoration: none;
+}
+.nme{
+    width: 100%;
+}
+
+.break{
+    width: 10px;
+}
+
+a,
+a label {
+    cursor: pointer;
+}
+
+
+
+.linkein{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.btn-group{
+    color: #e05252;
+}

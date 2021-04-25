@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #00688b !important;
+}
+
+.rp{
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*display: flex;*/
+    align-items: center;
+    align-content: center;
+    text-align-all: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+}
+
+.respasw{
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+.fomm{
+    float: left;
+    width: 100%;
+    padding-top: 10%;
+}
+
+.btn-danger{
+    width: 100%;
+    margin-top: 5%;
+    background-color: #ff6103 !important;
+    color: white !important;
+}
+
+.btn-danger:hover {
+    background-color: #de4004 !important;
+}
+
+.pdm{
+    background-color: palevioletred;
+    color: orchid;
+}
