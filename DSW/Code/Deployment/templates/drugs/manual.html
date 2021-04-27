@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+<div class = "white-bcolor mx-auto mt-5 manual-main">
+    <div class="content mx-auto pt-4 pb-4">
+        You can access the user manual by clicking the following urls:
+        <ul style="width: 30%">
+          <li style="width: 50%;" class="mr-auto mt-4">
+              <a href="/drugs/Static/data/Manual.pdf" target="_blank">
+                    View in Browser
+                </a>
+          </li>
+            <hr style="height: 0.01rem !important; width: 100%">
+          <li style="width: 50%;" class="mr-auto">
+              <a href="{% static '/data/Manual.pdf' %}" download>Download User Manual  </a>
+          </li>
+        </ul>
+    </div>
+
+</div>
+{% endblock content %}

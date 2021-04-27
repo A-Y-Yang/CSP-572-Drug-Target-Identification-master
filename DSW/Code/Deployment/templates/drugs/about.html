@@ -1,0 +1,178 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .sys-blue {
+        color: #086c92;
+    }
+</style>
+<div class="col" style="margin-left: 2.5rem">
+    <div class= "mt-5" style="
+            width: 50%;
+            margin-right: auto;
+            height: 2.7rem;
+            text-align: left;
+            color: white;
+        " class="col">
+            <h3 >About the Project </h3>
+        </div>
+    <div class="col mr-auto mt-2 p-4" style="background-color: white;
+    width: 95%; border-radius: 0.3rem; text-align: left !important; ">
+        <div class="black " >
+            In order to ensure rapid drug development, this project is useful in identifying the
+            potential drug compounds which can be classified as active/inactive
+            for given four targets after knowing their probability. A higher probability above
+            80 indicates an active compound where as a lower probability below 20 indicates an
+            inactive compound.
+         </div>
+
+        <h5 class="mt-4"> Approach </h5>
+
+        <div class="mt-2 black" >
+
+            The results are predicted with the help of two models running in the background :
+                <li>
+                    <strong> Binary Label Classification (Model1)</strong> works by evaluating the probability through a
+                    single model for each target so there are four different models for four different
+                    targets.
+                </li>
+
+                <li>
+                    <strong> Multi Label Classification (Model2) </strong> works by evaluating the probability through a single
+                    model for all given targets i.e there is one model for all four targets.
+
+                </li>
+
+
+        </div>
+    </div>
+    <div class="mt-5" style="
+            width: 50%;
+            margin-right: auto;
+            height: 2.7rem;
+            text-align: left;
+            color: white;
+        " class="col">
+            <h3 > Meet the team </h3>
+        </div>
+    <div style="background-color: white;
+    width: 95%; border-radius: 0.3rem; text-align: left !important; ">
+        <div class="row ml-3 p-4" >
+            <div class="col col-md-3" >
+                <img src="/drugs/Static/Pictures/anuragg.jpg"
+                     height="150px" width="150px" style="object-fit: cover; border-radius: 50%">
+                <div class="mt-2" style="margin-left: 1.2rem"> ANURAG GUNTI </div>
+                <div class="linkein">
+                    <h4 class="text-left"><a class="namcode" href="https://www.linkedin.com/in/anurag-chandra2/"
+                                           style="text-decoration: None; color: black; margin-left: 3.2rem;">
+                        <img src="/drugs/Static/Pictures/ln.png" width="60px;">
+                    </a></h4>
+                </div>
+            </div>
+
+            <div class="col col-md-3" >
+                <img src="/drugs/Static/Pictures/ayush.jpg"
+                     height="150px" width="150px" style="object-fit: cover; border-radius: 50%">
+                <div class="mt-2" style="margin-left: 1.2rem"> AYUSH DADHICH </div>
+                <div class="linkein">
+                    <h4 class="text-left"><a class="namcode" href="https://www.linkedin.com/in/ayush-dadhich/"
+                                           style="margin-left: 3.2rem; text-decoration: None; color: black;">
+                        <img src="/drugs/Static/Pictures/ln.png" width="60px;">
+                    </a></h4>
+                </div>
+            </div>
+
+            <div class="col col-md-3" >
+                <img src="/drugs/Static/Pictures/kausar_.png"
+                     height="150px" width="150px" style="object-fit: cover; border-radius: 50%">
+                <div class="mt-2" style="margin-left: 1.2rem"> KAUSAR PERVEEN </div>
+                <div class="linkein">
+                    <h4 class="text-left"><a class="namcode" style="margin-left: 3.2rem;" href="https://www.linkedin.com/in/kausar-perveen-09929799/"         
+                                           style="margin-left: 3.2rem; text-decoration: None; color: black;">
+                        <img src="/drugs/Static/Pictures/ln.png" width="60px;">
+                    </a></h4>
+                </div>
+            </div>
+
+            <div class="col col-md-3" >
+                <img src="/drugs/Static/Pictures/yin_.jpg"
+                     height="150px" width="150px" style="object-fit: cover; border-radius: 50%">
+                <div class="mt-2" style="margin-left: 2.6rem"> YIN YANG </div>
+                <div class="linkein">
+                    <h4 class="text-left"><a class="namcode" href="https://www.linkedin.com/in/yin-yang-261821184/"
+                                           style="text-decoration: None; color: black; margin-left: 3.2rem;">
+                        <img src="/drugs/Static/Pictures/ln.png" width="60px;">
+                    </a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<!--<div class="photos col" style="background-color: #ffffff !important; border-radius: 0.5rem; ">-->
+
+<!--    <div class="row mx-auto" style="width: 90%">-->
+<!--        <div class="col">-->
+<!--            <div class="photo1">-->
+<!--                    <img src="/drugs/Static/Pictures/anuragg.jpg">-->
+<!--                </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="photomain" style="margin-top: 150px;">-->
+<!--        <div class="photosec1">-->
+<!--            <div class="picturesec">-->
+<!--                <div class="photo1">-->
+<!--                    <img src="/drugs/Static/Pictures/anuragg.jpg">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--                    <div class="namesec">-->
+<!--                        <h6 class="nam">ANURAG GUNTI</h6>-->
+<!--                        <h6 class="namcode">ANURAG GUNTI</h6>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="photosec2">-->
+<!--                    <div class="picturesec">-->
+<!--                        <div class="photo2">-->
+<!--                            <img src="/drugs/Static/Pictures/ayush.jpg">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="namesec">-->
+<!--                        <h6 class="nam">AYUSH DADHICH</h6>-->
+<!--                        <h6 class="namcode">AYUSH DADHICH</h6>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="photosec3">-->
+<!--                    <div class="picturesec">-->
+<!--                        <div class="photo3">-->
+<!--                            <img src="/drugs/Static/Pictures/kausar_.png">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="namesec">-->
+<!--                        <h6 class="nam">KAUSAR PERVEEN</h6>-->
+<!--                        <h6 class="namcode">KAUSAR PERVEEN</h6>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="photosec4">-->
+<!--                    <div class="picturesec">-->
+<!--                        <div class="photo3">-->
+<!--                            <img src="/drugs/Static/Pictures/yin_.jpg">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="namesec">-->
+<!--                        <h6 class="nam">YIN YANG</h6>-->
+<!--                        <h6 class="namcode">YIN YANG</h6>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--{#            <div class="photo1"></div>#}-->
+<!--{#            <div class="photo2"></div>#}-->
+<!--{#            <div class="photo3"></div>#}-->
+<!--{#            <div class="photo4"></div>#}-->
+<!--        </div>-->
+{% endblock content %}

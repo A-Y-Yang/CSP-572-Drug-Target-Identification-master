@@ -1,0 +1,130 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="w-50 mx-auto r-main mt-4">
+    <h3 class="my-auto mx-auto r-heading w-50" style="color: black !important;">
+        Active/Inactive and Similar Compounds</h3>
+</div>
+
+
+<div class="accordion open accordion-flush mx-auto mt-5 w-90" id="accordionFlushExample">
+  <div class="accordion-item mt-3">
+    <h2 class="accordion-header white-bcolor" id="flush-headingTwo">
+          <button class="accordion-button collapsed black ab-sim" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Predicted Active/Inactive Compounds
+              <span class="ml-auto orange"> Active > 75% </span>
+          </button>
+
+    </h2>
+    <div id="flush-collapseTwo"
+         class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+         data-bs-parent="#accordionFlushExample">
+        <div class="w-100 a-comp" >
+            <div class="row mx-auto p-2 a-comp-head">
+                <div class="col-md-7"> Compounds</div>
+                <div class="col-md-5 row">
+                    {% for t in targets %}
+                    <div class="col-md-3"> <strong> {{t}} </strong> </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% for key, values in prob.items %}
+            <div class="card mx-auto mt-2">
+            <div class="card-body row">
+                <div class="col-md-7 c-text"> {{key}} </div>
+                  <div class="col-md-5 row ">
+                      {% for target, p in values.items %}
+                            <div class="col-md-3 column f1">
+                                <div >
+
+                                    <span class="{% if p.probability >= 80 %} text-success
+                                    {% elif p.probability < 80 and p.probability > 50 %} text-warning
+                                     {% else %} text-danger {% endif %}">
+                                        <strong> {{p.probability}}% </strong>
+                                    </span>
+                                </div>
+                            </div>
+                      {% endfor %}
+                  </div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+  </div>
+
+  <div class="accordion-item mt-3">
+    <h2 class="accordion-header white-bcolor" id="flush-headingThree">
+      <button class="accordion-button collapsed black" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Similar Compounds
+      </button>
+    </h2>
+    <div id="flush-collapseThree"
+         class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+         data-bs-parent="#accordionFlushExample">
+        <div class="w-100 a-comp">
+            <div class="accordion" id="accordionSim">
+                {% for key, values in similar.items %}
+          <div class="accordion-item b-white">
+            <h2 class="accordion-header mx-auto white-bcolor" id="headingOne">
+              <button class="accordion-button mx-auto black" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse-sim-{{forloop.counter}}" aria-expanded="true" aria-controls="collapse-sim-{{forloop.counter}}"
+                        >
+                Compounds Similar to {{key}}
+              </button>
+            </h2>
+            <div id="collapse-sim-{{forloop.counter}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionSim">
+              <div class="accordion-body">
+                  {% for v in values %}
+
+                      <div class="card mx-auto mt-2 w-95">
+                <div class="card-body col">
+                    <div class="row f1-2">
+                        <p class="col-md-6 my-auto row d-inline">
+                            Compound: <span class="c-text"> {{v.smile}} </span>
+                        </p>
+                        <p class="col-md-2 my-auto mx-auto row d-inline">
+                            Similarity: <span class="text-success"> {{v.similarity}} </span>
+                        </p>
+                    </div>
+                    <hr class="mx-auto w-85"/>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div  class="c-text f1-2">  Query Compound </div>
+                            <img src="/drugs/Static/Pictures/similarity/{{v.query}}" height="320px" width = "320px">
+                        </div>
+                        <div class="col">
+                            <div class="c-tex f1-2"> Result Compound </div>
+                            <img src="/drugs/Static/Pictures/similarity/{{v.result}}" height="320px" width = "320px">
+                        </div>
+                        <div class="col">
+                            <div class="c-text f1-2"> Similarity Map</div>
+                            <img src="/drugs/Static/Pictures/similarity/{{v.image}}" height="320px" width = "320px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                  {% endfor %}
+              </div>
+            </div>
+          </div>
+
+                {% endfor %}
+</div>
+
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

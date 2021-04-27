@@ -1,0 +1,8 @@
+# MANAGED BY DSW
+041321CHEMBL2842_binary_FP_all_data.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+041321CHEMBL2842_Binary_modeling_dataset.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+041321CHEMBL2842_filtered_data.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+041321CHEMBL2842_raw_data.csv filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,110 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #00688b !important;
+}
+.man{
+    width: 29%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align-all: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.fom{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.rusername{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.remail{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.rpassword{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.rcpassword{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.reg_first_name{
+    width: 100%;
+    font-size: large;
+    border: 2px solid #00688b;
+    border-radius: 4px;
+    padding-left: 2%;
+}
+.reg_email{
+    width: 100%;
+    font-size: large;
+    border: 2px solid #00688b;
+    border-radius: 4px;
+    padding-left: 2%;
+}
+.reg_password{
+    width: 100%;
+    font-size: large;
+    border: 2px solid #00688b;
+    border-radius: 4px;
+    padding-left: 2%;
+}
+.reg_confirm_password{
+    width: 100%;
+    font-size: large;
+    border: 2px solid #00688b;
+    border-radius: 4px;
+    padding-left: 2%;
+}
+.lusername{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.lemail{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.lpassword{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.lcpassword{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.bit{
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.bbtn-primary{
+    width: 100%;
+    background-color: #ff6103;
+    color: white;
+}
+
+.bbtn-primary:hover {
+    background-color: #dd501c !important;
+}
+input:-webkit-autofill::first-line {font-size: large}

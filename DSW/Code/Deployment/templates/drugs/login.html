@@ -1,0 +1,45 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authenticate</title>
+</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/logiin.css' %}">
+<body style="bacl">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="man">
+        <form class="fom" method="post">
+            {% csrf_token %}
+            <div class="usernam">
+                {% csrf_token %}
+                <label>Username</label>
+                {{ form.username|as_crispy_field }}
+                <br>
+            </div>
+            <div class="passwor">
+                {% csrf_token %}
+                <label class="labl">Password  <a class="hrea" href="/password_reset">  Forgot Password?</a></label>
+                {{ form.password|as_crispy_field }}
+                <br>
+            </div>
+
+            <div class="bit">
+                <button class="btn login-btn" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="sgup">
+        <button class="btn signup" type="submit" onclick="location.href='{% url 'signup' %}'">Signup</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+# MANAGED BY DSW
+041321_M_lstm_mod.h5 filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+041321_M_mrf_classifier.pkl filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+multi_X_test.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+041321_selected_M_bs_mod.h5 filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+multi_X_train.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+multi_X_val.csv filter=lfs diff=lfs merge=lfs -text
+# MANAGED BY DSW
+multi_X_val_train.csv filter=lfs diff=lfs merge=lfs -text

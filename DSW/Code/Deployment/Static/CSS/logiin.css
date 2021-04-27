@@ -1,0 +1,111 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #00688b !important;
+    /*background: rgb(238,174,202);*/
+    /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+}
+.man{
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align-all: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    width: 29%;
+    padding-bottom: 1.2rem;
+    padding-top: 1.2rem;
+    border-radius: 0.2rem;
+
+}
+.fom{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.usernam{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.passwor{
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.bit{
+    width: 100%;
+}
+.btn-primary{
+    width: 100%;
+}
+
+.username{
+    width: 100%;
+    font-size: large;
+    /*border: 2px solid coral;*/
+    border: 2px solid #00688b;
+    border-radius: 4px;
+    padding-left: 2%;
+}
+.password{
+    width: 100%;
+    font-size: large;
+     border: 2px solid #00688b;
+    border-radius: 4px;
+    padding-left: 2%;
+}
+.labl{
+    width: 100%;
+}
+.hrea{
+    padding-left: 10%;
+    color: #00688b !important;
+}
+
+.login-btn {
+    background-color: #00688b;
+    color: white;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background-color: #0e7dab !important;
+}
+
+a {
+    text-decoration: none;
+}
+.sgup{
+    width: 29%;
+    background-color: white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align-all: center;
+    border-radius: 2px;
+    padding: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signup{
+    width: 100%;
+    background-color: #ff6103;
+    color: white;
+}
+
+.signup:hover {
+    background-color: #e55803 !important;
+}
+input:-webkit-autofill::first-line {font-size: large}
