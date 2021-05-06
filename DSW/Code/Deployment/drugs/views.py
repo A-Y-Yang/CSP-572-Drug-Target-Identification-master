@@ -43,7 +43,7 @@ from rdkit.Chem import Draw
 from rdkit.Chem.Fingerprints import FingerprintMols
 from rdkit import DataStructs
 
-
+import joblib
 import matplotlib
 matplotlib.use('Agg')
 
@@ -150,37 +150,40 @@ def ml_model(file_data, some_var, email, request, set_res):
     for i in some_var:
         if i == 'EGFR':
             # xpath = os.path.join(path, 'Static/Models/Binary/CHEMBL_203/rf.pkl')
-            with open('Static/Models/Binary/CHEMBL_203/rf.pkl', 'rb') as file:
+            with open('Static/Models/Binary/CHEMBL_203/CHEMBL203_clf.pkl', 'rb') as file:
                 # with open(xpath, 'rb') as file:
-                pickle_model = pickle.load(file)
+                pickle_model = joblib.load(file)
             prob = pickle_model.predict_proba(df)
             dictionary['EGFR'] = list(prob[:, 1]*100)
         elif i == 'IGF1R':
             # xpath = os.path.join(path, 'Static/Models/Binary/CHEMBL_1957/rf.pkl')
-            with open('Static/Models/Binary/CHEMBL_1957/rf.pkl', 'rb') as file:
+            with open('Static/Models/Binary/CHEMBL_1957/CHEMBL1957_clf.pkl', 'rb') as file:
                 # with open(xpath, 'rb') as file:
                 print("in the section MIA-PaCa")
-                pickle_model = pickle.load(file)
+                pickle_model = joblib.load(file)
             prob = pickle_model.predict_proba(df)
             dictionary['IGF1R'] = list(prob[:, 1]*100)
         elif i == 'MIA-PaCa-2':
             # xpath = os.path.join(path, 'Static/Models/Binary/CHEMBL_614725/rf.pkl')
-            with open('Static/Models/Binary/CHEMBL_614725/rf.pkl', 'rb') as file:
+            with open('Static/Models/Binary/CHEMBL_614725/CHEMBL614725_clf.pkl', 'rb') as file:
                 # with open(xpath, 'rb') as file:
-                pickle_model = pickle.load(file)
+                pickle_model = joblib.load(file)
             prob = pickle_model.predict_proba(df)
             dictionary['MIA-PaCa'] = list(prob[:, 1]*100)
         else:
             # xpath = os.path.join(path, 'Static/Models/Binary/CHEMBL_2842/rf.pkl')
             # with open(xpath, 'rb') as file:
-            with open('Static/Models/Binary/CHEMBL_2842/rf.pkl', 'rb') as file:
-                pickle_model = pickle.load(file)
+            with open('Static/Models/Binary/CHEMBL_2842/CHEMBL2842_clf.pkl', 'rb') as file:
+                pickle_model = joblib.load(file)
             prob = pickle_model.predict_proba(df)
             dictionary['mTOR'] = list(prob[:, 1]*100)
     gd = pd.DataFrame(dictionary, index=file_data.head(5)['canonical_smiles'].values)
     # gd = gd.rename_axis(index='Compounds', columns='Targets')
     # xpath = os.path.join(path, 'Static/Models/MLC/mlc_model.h5')
-    mlc_model = keras.models.load_model('Static/Models/MLC/mlc_model_r.h5')
+    #from tensorflow.keras.models import load_model 
+    import tensorflow as tf
+    HeUniform = tf.keras.initializers.he_uniform()
+    mlc_model = keras.models.load_model('Static/Models/MLC/mlc_clf.h5', custom_objects={'HeUniform': HeUniform},compile=False)
     prob = mlc_model.predict_proba(df)
 
     for j in some_var:
